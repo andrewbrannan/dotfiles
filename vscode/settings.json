@@ -1,0 +1,22 @@
+{
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 0,
+    "markdown-table-formatter.markdownGrammarScopes": [
+        "markdown",
+        "proto3"
+    ],
+    "[proto3]": {
+        "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "LaurentTreguier.uncrustify"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
+}
