@@ -19,3 +19,11 @@ install:
 	cat $(SCRIPT_DIR)/vscode/extensions.txt | xargs -L 1 echo code --install-extension | bash
 
 	@echo ### Done!
+
+save:
+	@echo ### Saving vscode configuration
+
+	# Copy a list of current vscode extensions
+	code --list-extensions > ${SCRIPT_DIR}/vscode/extensions.txt
+
+	@echo ### Done!
