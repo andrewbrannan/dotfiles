@@ -13,22 +13,29 @@ export TERM=xterm-256color
 
 # vim bindings - thanks https://dougblack.io/words/zsh-vi-mode.html
 bindkey -v
-# Use vim cli mode
+
 bindkey '^P' up-history
 bindkey '^N' down-history
-
-# backspace and ^h working even after
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
-
-# ctrl-w removed word backwards
 bindkey '^w' backward-kill-word
-
-# ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
 
-# Need this to clear the [NORMAL] for each new prompt
 precmd() { RPROMPT="" }
+function zle-line-init zle-keymap-select {
+   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+   RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+   zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+export KEYTIMEOUT=1
+
+# History search on up/down arrows
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # User configuration
 
