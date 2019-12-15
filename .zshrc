@@ -6,10 +6,11 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git history-substring-search)
+plugins=(git osx history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
+export KEYTIMEOUT=1
 
 # vim bindings - thanks https://dougblack.io/words/zsh-vi-mode.html
 bindkey -v
@@ -31,7 +32,9 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-export KEYTIMEOUT=1
+# History search on k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # History search on up/down arrows
 bindkey "^[[A" history-beginning-search-backward
