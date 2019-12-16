@@ -58,7 +58,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Set personal aliases
 alias prp="pipenv run python"
-
+alias spp="spotify play"
+alias sps="spotify pause"
+alias spn="spotify next"
+alias spt="spotify status"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
