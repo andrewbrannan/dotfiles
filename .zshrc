@@ -58,6 +58,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Set personal aliases
 alias prp="pipenv run python"
+alias sp="spotify"
 alias spp="spotify play"
 alias sps="spotify pause"
 alias spn="spotify next"
