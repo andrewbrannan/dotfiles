@@ -412,3 +412,17 @@ let g:netrw_winsize = 30
 
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
+
+" Nerf the arrow keys for commitment
+nnoremap <up>    <nop>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+inoremap <up>    <nop>
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
+
+" Yank/paste to/from system clipboard
+set clipboard=unnamedplus
+
