@@ -1,6 +1,6 @@
 # dotfiles
 
-Config for zsh, vim and tmux
+Install and configure personal command line tools
 
 ## Install
 
