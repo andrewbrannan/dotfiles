@@ -13,12 +13,12 @@ install:
 	@echo ### Linking from ${HOME} to dotfiles
 	mkdir -p ${HOME}/.config
 	ln -sf $(SCRIPT_DIR)/.vimrc ${HOME}/.vimrc
-	ln -sF $(SCRIPT_DIR)/.config/nvim ${HOME}/.config/nvim
+	ln -sF $(SCRIPT_DIR)/.config/nvim ${HOME}/.config/
 	ln -sf $(SCRIPT_DIR)/.zshrc ${HOME}/.zshrc
 	ln -sf $(SCRIPT_DIR)/.tmux.conf ${HOME}/.tmux.conf
 	
 	# Copy over plugins to .vim
-	ln -sF $(SCRIPT_DIR)/.vim ${HOME}/.vim
+	ln -sF $(SCRIPT_DIR)/.vim ${HOME}/
 
 	# Install vscode user settings... 
 	ln -sf $(SCRIPT_DIR)/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
