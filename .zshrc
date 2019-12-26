@@ -76,6 +76,7 @@ alias spp="spotify play"
 alias sps="spotify pause"
 alias spn="spotify next"
 alias spt="spotify status"
+alias vim="nvim"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
