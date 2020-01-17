@@ -6,7 +6,7 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx history-substring-search)
+plugins=(git osx history-substring-search poetry zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
@@ -45,14 +45,9 @@ zle -N zle-keymap-select
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# History search on up/down arrows and always set cursor at end of row
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search
-bindkey "^[[B" down-line-or-beginning-search
-
+# Disable up and down arrows to force vim keybinding navigation
+bindkey -s '^[[A' ''
+bindkey -s '^[[B' ''
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
@@ -68,6 +63,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Random additions to path
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # Set personal aliases
 alias prp="pipenv run python"
@@ -90,3 +86,6 @@ prompt_context(){}
 prompt_dir() {
   prompt_segment blue black '%1~'
 }
+
+# Reload zsh completions
+autoload -U compinit && compinit

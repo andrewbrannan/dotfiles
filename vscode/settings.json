@@ -18,5 +18,12 @@
     },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false
+    "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
+    "python.jediEnabled": false,
+    "cloudcode.gke": {
+        "projectIds": [
+            "basis-infrastructure"
+        ]
+    },
+    "terminal.integrated.fontSize": 14
 }
