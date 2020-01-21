@@ -6,7 +6,9 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx history-substring-search poetry zsh-completions)
+export FZF_BASE=/usr/local/bin/fzf
+
+plugins=(git osx history-substring-search poetry zsh-completions fzf)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color

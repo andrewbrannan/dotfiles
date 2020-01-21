@@ -426,3 +426,6 @@ inoremap <right> <nop>
 " Yank/paste to/from system clipboard
 set clipboard=unnamedplus
 
+" turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
