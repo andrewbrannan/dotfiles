@@ -401,6 +401,7 @@ set timeoutlen=3000
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Set up netrw so we get a nice split 
@@ -409,6 +410,9 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 0 
 let g:netrw_altv = 1
 let g:netrw_winsize = 30
+
+"vim-terraform settings
+let g:terraform_fmt_on_save=1
 
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
