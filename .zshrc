@@ -56,7 +56,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export LANGUAGE=en:el
+export LANGUAGE=en_US:en
 
 export EDITOR='vim'
 
@@ -75,12 +75,6 @@ alias sps="spotify pause"
 alias spn="spotify next"
 alias spt="spotify status"
 alias vim="nvim"
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/andrew/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andrew/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # For agnoster theme to remove machine name beside user name
 DEFAULT_USER=andrew
 prompt_context(){}
@@ -91,3 +85,9 @@ prompt_dir() {
 
 # Reload zsh completions
 autoload -U compinit && compinit
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/andrew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/andrew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andrew/google-cloud-sdk/completion.zsh.inc'; fi

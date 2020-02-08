@@ -29,3 +29,7 @@ brew "zsh"
 brew "zsh-history-substring-search"
 brew "armmbed/formulae/arm-none-eabi-gcc"
 brew "oclint/formulae/oclint"
+brew "nvmim"
+brew "poetry"
+brew "terraform"
+
