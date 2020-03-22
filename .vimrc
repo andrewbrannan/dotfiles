@@ -402,7 +402,18 @@ call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'ervandew/supertab'
+Plug 'davidhalter/jedi-vim'
+Plug 'dense-analysis/ale'
 call plug#end()
+
+" ALE Settings
+let b:ale_linters_explict = 1
+let b:ale_linters = {'python': ['flake8']}
+let b:ale_fixers = {'python': ['black']}
+let b:ale_python_flake8_options = '--max-line-length=88 --extend-ignore=E203'
+let b:ale_fix_on_save = 1
+
 
 " Set up netrw so we get a nice split 
 let g:netrw_banner = 0
