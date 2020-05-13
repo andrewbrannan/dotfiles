@@ -397,6 +397,9 @@ set timeoutlen=3000
 
 " End boilerplate
 
+" Point to brew python
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Set up plugins
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
