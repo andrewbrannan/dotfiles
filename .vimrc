@@ -408,6 +408,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdcommenter'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 call plug#end()
 
 " ALE Settings

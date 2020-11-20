@@ -66,6 +66,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Random additions to path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Set personal aliases
 alias prp="pipenv run python"
@@ -75,6 +76,8 @@ alias sps="spotify pause"
 alias spn="spotify next"
 alias spt="spotify status"
 alias vim="nvim"
+alias diff="colordiff"
+
 # For agnoster theme to remove machine name beside user name
 DEFAULT_USER=andrew
 prompt_context(){}
@@ -91,3 +94,11 @@ if [ -f '/Users/andrew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/andrew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andrew/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Pyenv setup
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Work specific environment vars
+source ~/.berylenv

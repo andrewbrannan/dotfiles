@@ -22,8 +22,17 @@
     "python.jediEnabled": false,
     "cloudcode.gke": {
         "projectIds": [
-            "basis-infrastructure"
+            "basis-infrastructure",
+            "basis-janssen-test",
+            "beryl-basis-staging"
         ]
     },
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "python.languageServer": "Pylance",
+    "git.autofetch": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
