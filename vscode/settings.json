@@ -34,5 +34,6 @@
     "editor.formatOnPaste": true,
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
-    }
+    },
+    "sqltools.useNodeRuntime": true
 }

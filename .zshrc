@@ -86,6 +86,10 @@ prompt_dir() {
   prompt_segment blue black '%1~'
 }
 
+# Whack a newline onto the prompt
+NEWLINE=$'\n'
+export PROMPT="$PROMPT $NEWLINE👉 "
+
 # Reload zsh completions
 autoload -U compinit && compinit
 
