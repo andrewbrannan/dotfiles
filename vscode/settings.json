@@ -5,7 +5,7 @@
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
     "editor.lineNumbers": "relative",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "markdown-table-formatter.markdownGrammarScopes": [
         "markdown",
         "proto3"
@@ -35,5 +35,10 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "remote.SSH.enableDynamicForwarding": false,
+    "remote.SSH.remotePlatform": {
+        "remote-dev-instance": "linux"
+    },
+    "gitlens.views.repositories.enabled": true
 }

@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andrew/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
@@ -8,11 +8,16 @@ COMPLETION_WAITING_DOTS="true"
 
 export FZF_BASE=/usr/local/bin/fzf
 
-plugins=(git osx history-substring-search poetry zsh-completions fzf)
+plugins=(git osx history-substring-search fzf)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 export KEYTIMEOUT=1
+
+source $ZSH/antigen.zsh
+antigen bundle darvid/zsh-poetry
+antigen bundle zsh-users/zsh-completions
+antigen apply
 
 # vim bindings - thanks https://dougblack.io/words/zsh-vi-mode.html
 bindkey -v
