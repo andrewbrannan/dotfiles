@@ -71,6 +71,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Random additions to path
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Set personal aliases
@@ -96,7 +97,11 @@ NEWLINE=$'\n'
 export PROMPT="$PROMPT $NEWLINE👉 "
 
 # Reload zsh completions
+autoload -U bashcompinit && bashcompinit
 autoload -U compinit && compinit
+
+# pipx completions
+eval "$(register-python-argcomplete pipx)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/andrew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrew/google-cloud-sdk/path.zsh.inc'; fi
@@ -111,3 +116,6 @@ fi
 
 # Work specific environment vars
 source ~/.berylenv
+
+# Created by `userpath` on 2021-02-07 12:44:20
+export PATH="$PATH:/Users/andrew/.local/bin"
