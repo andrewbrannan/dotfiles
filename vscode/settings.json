@@ -1,44 +1,54 @@
 {
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
-    "editor.lineNumbers": "relative",
-    "window.zoomLevel": -1,
-    "markdown-table-formatter.markdownGrammarScopes": [
-        "markdown",
-        "proto3"
-    ],
-    "[proto3]": {
-        "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
-    },
-    "[c]": {
-        "editor.defaultFormatter": "LaurentTreguier.uncrustify"
-    },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
-    "python.jediEnabled": false,
-    "cloudcode.gke": {
-        "projectIds": [
-            "basis-infrastructure",
-            "basis-janssen-test",
-            "beryl-basis-staging"
-        ]
-    },
-    "terminal.integrated.fontSize": 14,
-    "python.languageServer": "Pylance",
-    "git.autofetch": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "sqltools.useNodeRuntime": true,
-    "remote.SSH.enableDynamicForwarding": false,
-    "remote.SSH.remotePlatform": {
-        "remote-dev-instance": "linux"
-    },
-    "gitlens.views.repositories.enabled": true
+  "gitlens.views.repositories.location": "gitlens",
+  "gitlens.views.fileHistory.location": "gitlens",
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
+  "editor.lineNumbers": "relative",
+  "markdown-table-formatter.markdownGrammarScopes": ["markdown", "proto3"],
+  "[proto3]": {
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "LaurentTreguier.uncrustify"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
+  "python.jediEnabled": false,
+  "cloudcode.gke": {
+    "projectIds": [
+      "basis-infrastructure",
+      "basis-janssen-test",
+      "beryl-basis-staging"
+    ]
+  },
+  "terminal.integrated.fontSize": 14,
+  "python.languageServer": "Pylance",
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "sqltools.useNodeRuntime": true,
+  "remote.SSH.enableDynamicForwarding": false,
+  "remote.SSH.remotePlatform": {
+    "remote-dev-instance": "linux"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "debug.javascript.autoAttachFilter": "disabled",
+  "window.zoomLevel": -1
 }

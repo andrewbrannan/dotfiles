@@ -84,6 +84,27 @@ alias spt="spotify status"
 alias vim="nvim"
 alias diff="colordiff"
 
+# npx shell fallback
+command_not_found_handler() {
+  # Do not run within a pipe
+  if test ! -t 1; then
+    >&2 echo "command not found: $1"
+    return 127
+  fi
+  if which npx > /dev/null; then
+    echo "$1 not found. Trying with npx..." >&2
+  else
+    return 127
+  fi
+  if ! [[ $1 =~ @ ]]; then
+    npx --no-install "$@"
+  else
+    npx "$@"
+  fi
+  return $?
+}
+
+
 # For agnoster theme to remove machine name beside user name
 DEFAULT_USER=andrew
 prompt_context(){}
@@ -113,6 +134,12 @@ if [ -f '/Users/andrew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/an
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
 # Work specific environment vars
 source ~/.berylenv
