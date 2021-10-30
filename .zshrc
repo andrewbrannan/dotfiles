@@ -70,7 +70,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Random additions to path
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
@@ -81,7 +80,6 @@ alias spp="spotify play"
 alias sps="spotify pause"
 alias spn="spotify next"
 alias spt="spotify status"
-alias vim="nvim"
 alias diff="colordiff"
 
 # npx shell fallback
