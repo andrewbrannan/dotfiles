@@ -345,31 +345,14 @@ let g:python_host_prog = '/Users/andrew/.pyenv/shims/python'
 let g:python3_host_prog = '/Users/andrew/.pyenv/shims/python3'
 
 " Set up plugins
-"call plug#begin('~/.vim/plugged')
-"Plug '/usr/local/opt/fzf'
-"Plug 'junegunn/fzf.vim'
-"Plug 'hashivim/vim-terraform'
-"Plug 'ervandew/supertab'
-"Plug 'davidhalter/jedi-vim'
-"Plug 'dense-analysis/ale'
-"Plug 'preservim/nerdcommenter'
-"Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-"Plug 'vim-airline/vim-airline'
-"Plug 'preservim/nerdtree'
-"call plug#end()
-"
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
-" ALE Settings
-let b:ale_linters_explict = 1
-let b:ale_linters = {'python': ['flake8']}
-let b:ale_fixers = {'python': ['black']}
-let b:ale_python_flake8_options = '--max-line-length=88 --extend-ignore=E203, W291'
-let b:ale_fix_on_save = 1
 
 " Airline settings
 
@@ -385,9 +368,6 @@ let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 30
 
-"vim-terraform settings
-let g:terraform_fmt_on_save=1
-
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 
@@ -400,9 +380,6 @@ inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
-
-" Yank/paste to/from system clipboard
-" set clipboard=unnamedplus
 
 " turn hybrid line numbers on
 :set number relativenumber
@@ -531,3 +508,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+
+" Set root dir when opening a python file 
+autocmd FileType python let b:coc_root_patterns = ['.git', '.venv', '.env']

@@ -80,6 +80,7 @@ alias spp="spotify play"
 alias sps="spotify pause"
 alias spn="spotify next"
 alias spt="spotify status"
+alias cat="bat"
 alias diff="colordiff"
 
 # npx shell fallback
